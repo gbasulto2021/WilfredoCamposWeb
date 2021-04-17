@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Dr. Wilfredo Campos</title>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <nav class="navigation">
+                <div class="title">
+                    <a href="#"><h1>PORTAFOLIO.</h1></a>
+                </div>
+                <ul class="menu">
+                    <li class="menu__link" ><a href="#">INCIO</a></li>
+                    <li class="menu__link"><a href="#caja2">ACERCA</a></li>
+                    <li class="menu__link"><a href="#">PUBLICACIONES</a></li>
+                    <li class="menu__link"><a href="#">LIBROS</a></li>
+                    <li class="menu__link"><a href="#">CONTACTO</a></li>
+                </ul>
+                
+            </nav>
+            <span id="menu-bars" class="menu-bars" @click="estado = !estado"><i class="fas fa-bars"></i></span>
+        </header>
+        <div class="presentation1">
+            <div class="black_panel">
+                <div class="pattern"></div>
+            </div>
+            <div class="foto1">
+                <!-- <img src="/img/diego2.jpg" alt="Diego Wilfredo"> -->
+            </div>
+            <div class="text_principal">
+                <h3 class="title_name">MI NOMBRE ES</h3>
+                <h2 class="name">WILFREDO DE JESUS CAMPOS CREME</h2>
+                <h4 class="title_dev">INVESTIGADOR, EDITOR E HISTORIADOR</h4>
+            </div>
+        </div>
+    </div>
+    <div class="caja2" id="caja2">
+        <div class="foto2">
+            <div class="caja_negra">
+                <img src="img/diego1.jpg" alt="">
+                <span><i class="fas fa-circle"></i></span>
+                <span><i class="fas fa-dot-circle"></i></span>
+                <div class="pattern3"></div>
+            </div>
+        </div>
+        <div class="presentation2">
+            <div class="title_hello">
+                <div class="hello">
+                    <p>who am i</p>
+                    <h2>ACERCA</h2>
+                </div>
+                <div class="pattern2"></div>
+            </div>
+            <p class="parrafo1">Wilfredo de Jesús Campos Cremé (Guantánamo, 1961). Dr.C. en Ciencias Históricas, MSc. en Ciencias de la Educación. Investigador, editor e Historiador. Profesor de Historia de la Universidad de Guantánamo. Autor de los libros La revolución pospuesta (2001), Síntesis histórica municipal Guantánamo (2011), entre otros </p>
+            <p class="parrafo2">Presidente de la Cátedra Honorífica de estudios de la ilegal base naval de los EE.UU. en Guantánamo. Miembro de la UNHIC.</p>
+        </div>
+    </div>
+    <main class="main">
+      <secction class="main__presentation">
+          <div class="main__presentation-title">
+              <h2>MI TRABAJO</h2>
+              <h4>Proyectos</h4>
+              <span><i class="fas fa-dot-circle"></i></span>
+              
+          </div>
+          <nav class="navigation">
+              <ul class="menu" id="menu-cat">
+                <li class="menu__link"><a href="">TODOS</a></li>
+                <li class="menu__link"><a href="">LIBROS</a></li>
+                <li class="menu__link"><a href="">PUBLICACIONES</a></li>
+                <li class="menu__link"><a href="">REVISTAS</a></li>
+                <li class="menu__link"><a href="">BRANDING</a></li>
+              </ul>
+              
+          </nav>
+          <div class="pattern4"></div>
+      </secction>
+      <secction class="grid_galery">
+          <div class="grid_galery__item">
+              <a href="#"><img src="img/img1.jpg" alt=""></a>
+              
+          </div>
+          <div class="grid_galery__item">
+            <a href="#"><img src="img/img2.jpg" alt=""></a>
+            
+     
+        </div>
+        <div class="grid_galery__item">
+            <a href="#"><img src="img/img3.jpg" alt=""></a>
+            
+
+        </div>
+        <div class="grid_galery__item">
+            <a href="#"><img src="img/img4.jpg" alt=""></a>
+            
+
+        </div>
+        <div class="grid_galery__item">
+            <a href="#"><img src="img/img5.jpg" alt=""></a>
+            
+
+        </div>
+        <div class="grid_galery__item">
+            <a href="#"><img src="img/img6.jpg" alt=""></a>
+            
+
+        </div>
+        <div class="grid_galery__item">
+            <a href="#"><img src="img/img7.jpg" alt=""></a>
+           
+
+        </div>
+        <div class="grid_galery__item">
+            <a href="#"><img src="img/img8.jpg" alt=""></a>
+           
+
+        </div>
+        <div class="grid_galery__item">
+            <a href="#"><img src="img/img9.jpg" alt=""></a>
+            
+
+        </div>
+      </secction>
+      <secction class="my_blog">
+        <div class="my_blog__title">
+            <h4>Subscribe to</h4>
+            <h2>MY BLOG</h2>
+            <span><i class="fas fa-circle"></i></span>
+        </div>
+        <div class="my_blog__description">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit debitis architecto animi et nemo perspiciatis placeat?</p>
+        </div>
+        <form class="my_blog__suscription">
+            <input type="email" class="email" id="email">
+            <button class="button" id="button">Subscribe Now</button>
+        </form>
+      </secction>
+    </main>
+    
+    <script src="https://kit.fontawesome.com/ef57aa0fb4.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
