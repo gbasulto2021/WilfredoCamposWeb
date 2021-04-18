@@ -9,8 +9,24 @@ menuBars.addEventListener('click', ()=>{
     menu.classList.toggle('menu-is-active');
     menuLink.forEach((list)=>{
         list.classList.toggle('display');
-    })
+        
+    });
+   
 });
+
+menu.addEventListener('click', ()=>{
+    menu.classList.remove('menu-is-active');
+    menuLink.forEach((list)=>{
+        list.classList.remove('display');
+        
+    });    
+});
+
+
+
+
+
+
 
 menuCat.addEventListener('click', (e)=>{
     e.preventDefault();
