@@ -443,11 +443,10 @@ background-size: 25px 25px;
 .grid_galery__item::before{
     content: "";
     position: absolute;
-    
     background-color: rgba(34,34,34,0.85);
     width: 0%;
     top: 0;
-    bottom: 34px;
+    bottom: 0;
     left: 0;
     right: 0;
     transition: all 0.5s ease;
