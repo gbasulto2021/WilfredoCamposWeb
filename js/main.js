@@ -22,12 +22,6 @@ menu.addEventListener('click', ()=>{
     });    
 });
 
-
-
-
-
-
-
 menuCat.addEventListener('click', (e)=>{
     e.preventDefault();
     let textFilter = e.target.textContent.toLowerCase();

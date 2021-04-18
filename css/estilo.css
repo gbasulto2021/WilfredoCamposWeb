@@ -413,34 +413,32 @@ background-size: 25px 25px;
     margin: 0 auto;
     margin-bottom: 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 110px));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 5px;
 }
 
 .grid_galery__item{
     width: 100%;
-    height: 160px;
     /* height: 200px; */
     cursor: pointer;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     visibility: visible;
     opacity: 1;
     transition: opacity 0.6s;
 
 }
 
-.grid_galery__item > p{
-    position: absolute;
+.grid_galery__item > h4{
     display: block;
     width: 100%;
-    font-size: .7em;
-    padding: 5px;
-    top: 20px;
+    height: 35px;
+    background-color: #243453;
     color:#fff;
     text-align: center;
-    
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    line-height: 35px;
 }
 .grid_galery__item::before{
     content: "";
@@ -457,9 +455,6 @@ background-size: 25px 25px;
 .grid_galery__item:hover::before{
     width: 100%;
  
-}
-.grid_galery__item:hover > p{
-    opacity: 1;
 }
 
 .inactivo{
@@ -549,7 +544,6 @@ background-size: 25px 25px;
     width: 100%;
     height: 50px;
     display: flex;
-    
     flex-direction: row;
     justify-content: space-evenly;
     align-items: right;
@@ -590,20 +584,19 @@ background-size: 25px 25px;
 }
 .footer__icons .icon a{
     color: #000;
-    font-size: 25px;
-    
 }
 .footer__icons .icon a:hover{
     color:#FFEE58;
 }
-
-.footer h5{
-    margin-bottom: 1em;
+.footer__icons .icon > span i{
+    font-size: 25px;
+    line-height: 30px;
+    
 }
 
 
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
     
     .pattern3{
         display:none;
@@ -614,8 +607,22 @@ background-size: 25px 25px;
         flex-direction: column;
         
     }
+    
 
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 480px) {
+    
+    .navigation .title{
+        font-size: .8em;
+    }
+
+    .pattern4{
+        display:none;
+    }
+    .foto1{
+        background-position:top;
+       
+    }
+
     .header .menu{
         
         flex-direction: column;
@@ -624,8 +631,8 @@ background-size: 25px 25px;
         height:0;
         position: absolute;
         background-color: rgba(34,34,34,0.85);
-        top: 80px;
-        opacity: 0;
+        top: 100px;
+        opacity: 1;
         transition: all 0.5s ease;
 
     }
@@ -645,31 +652,12 @@ background-size: 25px 25px;
 
    .header .menu-bars{
         display: block;
-        cursor: pointer;
         right: 0;
         top: 5px;
         padding: 20px;
         font-size: 30px;
         color: #fff;
     }
-  }  
-    
-
-  @media screen and (max-width: 480px) {
-    
-    .navigation .title{
-        font-size: .8em;
-    }
-
-    .pattern4{
-        display:none;
-    }
-    .foto1{
-        background-position:top;
-       
-    }
-
-   
 
     .presentation1 .text_principal{
         width: 200px;
