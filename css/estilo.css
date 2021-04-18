@@ -585,14 +585,15 @@ background-size: 25px 25px;
 }
 .footer__icons .icon a{
     color: #000;
+    font-size: 25px;
+    
 }
 .footer__icons .icon a:hover{
     color:#FFEE58;
 }
-.footer__icons .icon > span i{
-    font-size: 25px;
-    line-height: 30px;
-    
+
+.footer h5{
+    margin-bottom: 1em;
 }
 
 
