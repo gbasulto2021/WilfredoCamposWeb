@@ -3,7 +3,13 @@ const menu = d.querySelector('.menu');
 const menuBars = d.querySelector('#menu-bars');
 const menuLink = d.querySelectorAll('.menu > li');
 const menuCat = d.querySelector('#menu-cat');
+const gallery = d.querySelector('.grid_galery');
 const items = d.querySelectorAll('.grid_galery .grid_galery__item');
+
+const closeModal = d.querySelector('.fas.fa-times');
+const containerImg = document.querySelector('.container-img');
+const imgContainer = document.querySelector('.img-show');
+const copy = document.querySelector('.copy');
 
 menuBars.addEventListener('click', ()=>{
     menu.classList.toggle('menu-is-active');
@@ -22,20 +28,45 @@ menu.addEventListener('click', ()=>{
     });    
 });
 
-menuCat.addEventListener('click', (e)=>{
-    e.preventDefault();
-    let textFilter = e.target.textContent.toLowerCase();
-    items.forEach((item)=> {
+// menuCat.addEventListener('click', (e)=>{
+//     e.preventDefault();
+//     let textFilter = e.target.textContent.toLowerCase();
+//     items.forEach((item)=> {
         
-        if(item.textContent.toLowerCase().includes(textFilter)){
-            item.classList.remove('inactivo');
-        }else{
-            item.classList.add('inactivo');
-        }
-    });
-    if(textFilter==='todos'){
-        items.forEach((item)=> {
-            item.classList.remove('inactivo');
-        });
-    }
+//         if(item.textContent.toLowerCase().includes(textFilter)){
+//             item.classList.remove('inactivo');
+//         }else{
+//             item.classList.add('inactivo');
+//         }
+//     });
+//     if(textFilter==='todos'){
+//         items.forEach((item)=> {
+//             item.classList.remove('inactivo');
+//         });
+//     }
+// });
+
+
+
+gallery.addEventListener('click', (e)=>{
+    addImg(e.target.getAttribute('src'), e.target.getAttribute('alt'));
+    
 });
+
+const addImg = (srcImg, altImg)=>{
+    containerImg.classList.toggle('move');
+    if (srcImg !== null || srcImg !=undefined){
+        imgContainer.src = srcImg;
+        copy.innerHTML = altImg;
+    }else{
+        imgContainer.src = ""; 
+    }
+  
+};
+
+
+
+
+
+
+
