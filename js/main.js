@@ -4,12 +4,13 @@ const menuBars = d.querySelector('#menu-bars');
 const menuLink = d.querySelectorAll('.menu > li');
 const menuCat = d.querySelector('#menu-cat');
 const gallery = d.querySelector('.grid_galery');
-const items = d.querySelectorAll('.grid_galery .grid_galery__item');
-
+const items = d.querySelectorAll('.grid_galery__item');
+const imgText = d.querySelector('.img-text');
 const closeModal = d.querySelector('.fas.fa-times');
 const containerImg = document.querySelector('.container-img');
-const imgContainer = document.querySelector('.img-show');
-const copy = document.querySelector('.copy');
+const modal = d.querySelector('.modal');
+const imgContainer = d.querySelector('.img-show');
+const copy = d.querySelector('.copy');
 
 menuBars.addEventListener('click', ()=>{
     menu.classList.toggle('menu-is-active');
@@ -47,22 +48,22 @@ menu.addEventListener('click', ()=>{
 // });
 
 
-
-gallery.addEventListener('click', (e)=>{
-    addImg(e.target.getAttribute('src'), e.target.getAttribute('alt'));
+items.forEach((item)=>{
+    item.addEventListener('click', evt=> addImg(evt.target.getAttribute('src'), evt.target.getAttribute('alt'), item.lastElementChild.textContent));
     
 });
 
-const addImg = (srcImg, altImg)=>{
-    containerImg.classList.toggle('move');
-    if (srcImg !== null || srcImg !=undefined){
+const addImg = (srcImg, altImg, textModal)=>{
+    modal.classList.toggle('move');
         imgContainer.src = srcImg;
         copy.innerHTML = altImg;
-    }else{
-        imgContainer.src = ""; 
-    }
+        imgText.innerHTML = textModal;
   
 };
+
+closeModal.addEventListener('click', ()=>{
+    modal.classList.toggle('move');
+})
 
 
 
