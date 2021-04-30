@@ -103,8 +103,17 @@ transition: all 0.3s ease;
 }
 
 .menu__link:hover a:before{
-    width: 70%;
+    width: 100%;
 }
+
+#menu-cat .menu__link a.menu-active {
+    color: rgba(63, 66, 53, 0.85);
+}
+
+.select a::before {
+    width: 100%;
+}
+
 
 .menu-bars{
     display: none;
@@ -384,7 +393,7 @@ transition: all 0.3s ease;
     position: absolute;
     top:0;
     right: 0;
-    width: 25%;
+    width: 20%;
     height: 260px;
     background-color: #f4f4f4;
 opacity: 0.6;
@@ -507,7 +516,7 @@ background-size: 25px 25px;
     display: block;
     width: 30px;
     height: 30px;
-    top: -40px;
+    top: -50px;
     right: -40px;
     text-align: center;
     border: 1px solid #fff;
@@ -522,6 +531,10 @@ background-size: 25px 25px;
     color: #fff;
     font-size: 22px;
     line-height: 25px;  
+}
+.fas.fa-times:hover{
+    color: #ffee58;
+    
 }
 
 .modal-description{
@@ -701,7 +714,7 @@ background-size: 25px 25px;
   @media screen and (max-width: 480px) {
     
     .navigation .title{
-        font-size: .8em;
+        font-size: .7em;
     }
 
     .pattern4{
@@ -791,10 +804,8 @@ background-size: 25px 25px;
 
   @media screen and (max-width: 375px) {
     
-    .navigation .title{
-        font-size: .7em;
-        
-        
+    .navigation .title > a{
+        font-size: 0.7em;
     }
     .header{
         width: 90%;

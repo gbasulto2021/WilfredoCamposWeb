@@ -2,7 +2,7 @@ const d = document;
 const menu = d.querySelector('.menu');
 const menuBars = d.querySelector('#menu-bars');
 const menuLink = d.querySelectorAll('.menu > li');
-const menuCat = d.querySelector('#menu-cat');
+const menuCat = d.querySelectorAll('#menu-cat > li');
 const gallery = d.querySelector('.grid_galery');
 const items = d.querySelectorAll('.grid_galery__item');
 const imgText = d.querySelector('.img-text');
@@ -29,23 +29,38 @@ menu.addEventListener('click', ()=>{
     });    
 });
 
-// menuCat.addEventListener('click', (e)=>{
-//     e.preventDefault();
-//     let textFilter = e.target.textContent.toLowerCase();
-//     items.forEach((item)=> {
-        
-//         if(item.textContent.toLowerCase().includes(textFilter)){
-//             item.classList.remove('inactivo');
-//         }else{
-//             item.classList.add('inactivo');
-//         }
-//     });
-//     if(textFilter==='todos'){
-//         items.forEach((item)=> {
-//             item.classList.remove('inactivo');
-//         });
-//     }
-// });
+menuCat.forEach((category)=>{
+    
+    category.addEventListener('click', (evt)=>{
+        evt.preventDefault();
+        d.querySelector('#menu-cat > li a.menu-active').classList.remove('menu-active');
+        d.querySelector('#menu-cat > li.select').classList.remove('select');
+        evt.target.parentElement.classList.add('select');
+        evt.target.classList.add('menu-active');
+        let cat = evt.target.textContent.toLocaleLowerCase();
+        items.forEach((item)=>{
+            
+            let elements = item.dataset.attribute.toLocaleLowerCase();
+            
+            if (cat === elements) {
+                item.classList.remove('inactivo');
+                
+            } else {
+                item.classList.add('inactivo');
+                
+            }
+            if(cat === 'todos'){
+                
+                item.classList.remove('inactivo');
+            }
+            
+            
+        });
+       
+    });
+    
+    
+});
 
 
 items.forEach((item)=>{
